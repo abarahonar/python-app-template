@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+function format {
+	ruff check --select I --fix {{ code_slug }} tests
+	ruff format {{ code_slug }} tests
+}
+
+function lint {
+	ruff check {{ code_slug }} tests
+}
+
+function test {
+	# pytest tests --log-cli-level=DEBUG --capture=tee-sys
+	pytest tests
+}
+
+"$@"

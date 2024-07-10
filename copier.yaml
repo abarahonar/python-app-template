@@ -1,0 +1,24 @@
+_jinja_extensions:
+    - cookiecutter.extensions.SlugifyExtension
+
+name:
+  type: str
+  help: Name for the python project
+
+author:
+  type: str
+  help: Name of the author
+
+mail:
+  type: str
+  help: Mail of the author
+
+slug:
+  type: str
+  when: false
+  default: "{{ name | slugify }}"
+
+code_slug:
+  type: str
+  when: false
+  default: "{{ name | slugify(separator='_') }}"

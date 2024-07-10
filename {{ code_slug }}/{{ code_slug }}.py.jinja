@@ -1,0 +1,7 @@
+import logging
+from {{ code_slug }}.utils import logging as logging_utils
+
+
+def main():
+    logging_utils.setup()
+    logging.basicConfig(level="DEBUG")
