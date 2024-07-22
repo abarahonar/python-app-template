@@ -1,5 +1,7 @@
 _jinja_extensions:
-    - cookiecutter.extensions.SlugifyExtension
+  - cookiecutter.extensions.SlugifyExtension
+
+_subdirectory: template
 
 name:
   type: str
